@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const connectDatabase = () => {
   mongoose
-    .connect("mongodb+srv://dixankay:ecommerce1234@cluster0.e8xqc9b.mongodb.net/?retryWrites=true&w=majority", {
+    .connect("mongodb+srv://dixankay:ecommerce1234@cluster0.e8xqc9b.mongodb.net/eshop", {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     })
