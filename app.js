@@ -6,7 +6,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 
 app.use(cors({
-  origin: ['https://volary.000webhostapp.com',],
+  origin: ['https://volary.000webhostapp.com','https://volary.netlify.app'],
   credentials: true
 }));
 
