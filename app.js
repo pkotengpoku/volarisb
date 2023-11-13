@@ -55,7 +55,7 @@ app.use("/api/v2/payment", payment);
 app.use("/api/v2/withdraw", withdraw);
 app.use("/api/v2/testy", (req, res,) => {
   res.status(201).json({
-   "helpaaa",
+   "helpaaa":"sweet",
 })});
 
 // it's for ErrorHandling
