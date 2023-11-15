@@ -54,9 +54,11 @@ app.use("/api/v2/coupon", coupon);
 app.use("/api/v2/payment", payment);
 app.use("/api/v2/withdraw", withdraw);
 app.use("/api/v2/testy", (req, res,) => {
-  res.status(201).json({
-   "helpaaa":"sweet",
-})});
+  res.status(201).end(
+   "received",
+)
+console.log("payment received")
+});
 
 // it's for ErrorHandling
 app.use(ErrorHandler);
