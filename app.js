@@ -66,7 +66,7 @@ app.post("/mywebhookurl", function(req, res) {
     console.log(event)
     console.log("received")
     // Do something with event
-    res.send(200);
+    res.send(200).end("succesful payment");
 });
 
 // it's for ErrorHandling
