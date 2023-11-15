@@ -59,6 +59,15 @@ app.use("/api/v2/testy", (req, res,) => {
 )
 console.log("payment received")
 });
+//paystack
+app.post("/mywebhookurl", function(req, res) {
+    // Retrieve the request's body
+    const event = req.body;
+    console.log(event)
+    console.log("received")
+    // Do something with event
+    res.send(200);
+});
 
 // it's for ErrorHandling
 app.use(ErrorHandler);
