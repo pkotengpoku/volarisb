@@ -152,7 +152,6 @@ router.get(
   catchAsyncErrors(async (req, res, next) => {
     try {
       const product = await Product.findById(req.params.id)
-
       res.status(201).json(product);
     } catch (error) {
       return next(new ErrorHandler(error, 400));
