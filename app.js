@@ -6,7 +6,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 
 app.use(cors({
-  origin: ['https://volary.000webhostapp.com','https://volary.netlify.app','https://voshop.netlify.app'],
+  origin: ['http://localhost:5173','http://localhost:4173','https://volary.netlify.app'],
   credentials: true
 }));
 
@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 
 app.use(express.json());
 app.use(cookieParser());
-
+ 
 
 app.use("/test", (req, res) => {
   res.send("Hello world!");
@@ -42,6 +42,7 @@ const order = require("./controller/order");
 const conversation = require("./controller/conversation");
 const message = require("./controller/message");
 const withdraw = require("./controller/withdraw");
+const receipt = require("./controller/receipt");
 
 app.use("/api/v2/user", user);
 app.use("/api/v2/conversation", conversation);
@@ -53,21 +54,14 @@ app.use("/api/v2/event", event);
 app.use("/api/v2/coupon", coupon);
 app.use("/api/v2/payment", payment);
 app.use("/api/v2/withdraw", withdraw);
+app.use("/api/v2/webhook", receipt);
 app.use("/api/v2/testy", (req, res,) => {
   res.status(201).end(
    "received",
 )
 console.log("payment received")
 });
-//paystack
-app.post("/mywebhookurl", function(req, res) {
-    // Retrieve the request's body
-    const event = req.body;
-    console.log(event)
-    console.log("received")
-    // Do something with event
-    res.send(200);
-});
+
 
 // it's for ErrorHandling
 app.use(ErrorHandler);
