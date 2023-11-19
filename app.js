@@ -6,7 +6,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 
 app.use(cors({
-  origin: ['http://localhost:5173','http://localhost:4173','https://volary.netlify.app','https://voshop.netlify.app/'],
+  origin: ['http://localhost:5173','http://localhost:4173','https://volary.netlify.app','https://voshop.netlify.app'],
   credentials: true
 }));
 
