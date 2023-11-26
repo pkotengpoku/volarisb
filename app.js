@@ -55,7 +55,7 @@ app.use("/api/v2/coupon", coupon);
 app.use("/api/v2/payment", payment);
 app.use("/api/v2/withdraw", withdraw);
 app.use("/api/v2/webhook", receipt);
-app.use("/api/v2/testy", (req, res,) => {
+app.use("/api/v2/sucessy", (req, res,) => {
   res.status(201).end(
    "received",
 )
