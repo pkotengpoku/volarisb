@@ -8,7 +8,6 @@ router.post(
     "/paystack",
     catchAsyncErrors(async (req, res, next) => {
         // Retrieve the request's body
-        console.log(req.body)
         try {
             const result = req.body
 
@@ -24,7 +23,6 @@ router.post(
 
             const receipt = await Receipt.create({amount,id,reference,event,gateway_response,channel,email,customer_code,payment_status});
             res.status(200).send(receipt);
-            console.log("received")
             
         } catch (error) {
             console.log(error)
