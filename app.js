@@ -59,7 +59,6 @@ app.use("/api/v2/sucessy", (req, res,) => {
   res.status(201).end(
    "received",
 )
-console.log("payment received")
 });
 
 
